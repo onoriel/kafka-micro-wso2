@@ -1,10 +1,17 @@
 package com.onoriel.userservice.dto;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
+@ApiModel(description = "All details about the user. ")
 public class UserDto {
+	@ApiModelProperty(notes = "The generated user ID")
     private Long id;
+	@ApiModelProperty(notes = "The user first name")
     private String firstname;
+	@ApiModelProperty(notes = "The user last name")
     private String lastname;
+	@ApiModelProperty(notes = "The user email")
     private String email;
 
     public Long getId() {
