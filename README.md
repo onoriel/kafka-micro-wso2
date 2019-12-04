@@ -27,6 +27,29 @@ Enter to **_db-config_** folder and run:
 docker-compose -f docker-compose.yaml up
 docker-compose -f docker-compose.yaml down
 ```
+###   WSO2 - API Manager [Reference Guide](https://hub.docker.com/r/wso2/wso2am)
+
+* Pull latest **_wso2am_** image from ducker hub:
+	```
+	$ docker pull wso2/wso2am
+	```
+* The following command starts a Linux Ubuntu-based API Manager Docker image.
+	```
+	$ docker run -it -p 8280:8280 -p 8243:8243 -p 9443:9443 --name api-manager wso2/wso2am	
+	```
+#### Accessing management console
+To access the management console, use the Docker host IP and port 9443 as follows:
+```
+https://{DOCKER_HOST}:9443/carbon
+```
+To access the API Manager Publisher, use the Docker host IP and port 9443 as follows:
+```
+https://{DOCKER_HOST}:9443/publisher
+```
+To access the API Manager Store, use the Docker host IP and port 9443 as follows:
+```
+https://{DOCKER_HOST}:9443/store
+```
 ## Persistence Setup
 
 ### Kafka Manager
